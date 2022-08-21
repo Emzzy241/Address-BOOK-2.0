@@ -53,10 +53,42 @@ let emmaContact2 = new Contact("Emmanuel", "Richie", "Bimbola", "+23405334566", 
 addressBook.addContact(emmaContact1);
 addressBook.addContact(emmaContact2);
 
+Expected Output: {1: Contact, and 2: Contact}
+
 <!-- Our test got failed because our prototypal method only picks one Emmanuel, and we added 2 Emmanuel: YES if we were using a datbase there would be unique identifiers, we can also write some code that creates unique id's for each of the added contacts -->
 
-<!-- What we will do now is to add a uniqueid feature to our mock database and write a method for incrementing it by one when a new Contact is added: at least that way we can be rest assured that our method won't see 2 different emmanuel's as the same thing like it did before -->
+
+
+<!-- What we will do now is to add a uniqueid feature to our mock database and write a method for incrementing it by one when a new Contact is added: at least that way we can be rest assured that our method would use our new uniqueId as the key and won't see 2 different emmanuel's as the same thing like it did before when we were using the firstName as the key... This is done so that each time a new AddressBook is created it will have a currentId that begins with 0 and then we will define another protoype called assignId and update our addContact() method to work with this -->
 
 
 <!-- after we've added new properties to our database and updated the method for adding contacts to use this new property: Let us rerun the previous test -->
 
+
+<!-- retesting to check for uniqueness: -->
+Test: "Testing if our method cand ifferentiate between two people if their names are both Emmanuel"
+
+Code:
+let emmaContact1 = new Contact("Emmanuel", "Michael", "Ojedayo", "+234059509049", "emaaaaa241@gmail.com");
+
+
+let emmaContact2 = new Contact("Emmanuel", "Richie", "Bimbola", "+23405334566", "emazon241@gmail.com");
+
+addressBook.addContact(emmaContact1);
+addressBook.addContact(emmaContact2);
+
+Expected Output: {1: Contact, and 2: Contact}
+
+<!-- after updating our addContact() method, our function no longer uses firstName as the key for the value(contacts) but uses a unique Identifier; just like a real world database -->
+
+
+<!-- Our application is starting to look great, another thing we need is to be able to both find and delete contact -->
+
+Describe: The method for finding contacts
+
+Test: "A test for checking if the findContact() methods can truly find a user's contact"
+
+Code: 
+let contact = new Contact("Adanna", "Mercy", "Okoli", "+234-858585990", "adannaOk@hotmail.com");
+
+let contact2 = new Contact("Jennifer", "Ebun", "Ololade", "+227-9099900919", "jOlolade@rocketmail.com");
