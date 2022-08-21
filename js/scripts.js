@@ -7,7 +7,11 @@ function AddressBook() {
 
 // Methods for our Mock database
 
-AddressBook.prototype.addContact = function(contact){
+/* This method ppicks up that particular contact's firstName and 
+ turns it into a key and make it equal to the contact itself
+ Now we can see addressBook is an object containing another object called contacts
+*/
+ AddressBook.prototype.addContact = function(contact){
     this.contacts[contact.firstName] = contact;
 }
 
