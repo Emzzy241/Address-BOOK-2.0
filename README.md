@@ -15,7 +15,7 @@ testContact.MiddleName;
 
 Expected Output: 'Oluwole'
 
-Test: "A prototype method would be created for Contacts function and the method would concatenate user's last name and first name together"
+Test: "A prototype method would be created for Contacts constructor and the method would concatenate user's last name and first name together"
 Code: let testContact = new Contacts("Emmanuel", "Oluwole", "Mojiboye", "09012857304", "emzzyoluwole@gmail.com");
 <!-- this first one is for re instantiating our variable then to test now we do: -->
 testContact.fullName();

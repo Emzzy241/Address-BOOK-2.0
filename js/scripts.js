@@ -1,3 +1,11 @@
+// Adding our mock database now to the top
+
+// Business Logic for AddressBook
+function AddressBook() {
+    this.contacts = {};
+}
+
+
 // The constructor for Contacts will be written first and tested 
 // in the console
 
@@ -15,3 +23,4 @@ function Contacts(firstName, middleName, lastName, phoneNumber, email){
 Contacts.prototype.fullName = function(){
     return this.lastName + " " + this.firstName;
 }
+
