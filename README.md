@@ -11,6 +11,7 @@ Describe: The very first constructor of our Application; the function for Contac
 
 Test: "It will check if the console remembers our constructor and associates it with the testContact variable"
 Code: let testContact = new Contact("Emmanuel", "Oluwole", "Mojiboye", "09012857304", "emzzyoluwole@gmail.com");
+
 testContact.MiddleName;
 
 Expected Output: 'Oluwole'
@@ -31,7 +32,8 @@ Code:
 let addressBook = new AddressBook(); 
 <!-- we first instantiate(create) AddressBook object -->
 
-let contact = new Contact("Adanna", "Mercy" "Okoli", "+234-858585990", "adannaOk@hotmail.com");
+let contact = new Contact("Adanna", "Mercy", "Okoli", "+234-858585990", "adannaOk@hotmail.com");
+
 let contact2 = new Contact("Jennifer", "Ebun", "Ololade", "+227-9099900919", "jOlolade@rocketmail.com");
 <!-- The contact and contact2 variables were new objects created for our AddressBook database -->
 addressBook.addContact(contact);

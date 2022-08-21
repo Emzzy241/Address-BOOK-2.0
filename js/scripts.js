@@ -7,8 +7,8 @@ function AddressBook() {
 
 // Methods for our Mock database
 
-AddressBook.prototype.addContact() = function(){
-    
+AddressBook.prototype.addContact = function(contact){
+    this.contacts[contact.firstName] = contact;
 }
 
 
