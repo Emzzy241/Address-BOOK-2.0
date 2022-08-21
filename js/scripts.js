@@ -8,3 +8,10 @@ function Contacts(firstName, middleName, lastName, phoneNumber, email){
     this.phoneNumber = phoneNumber;
     this.email = email;
 }
+
+// THe first method for this function: a method capable of 
+// joining user's lastName and firstName together
+
+Contacts.prototype.fullName = function(){
+    return this.lastName + " " + this.firstName;
+}
