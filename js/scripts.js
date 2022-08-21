@@ -1,13 +1,15 @@
 // Adding our mock database now to the top
+// new feature to our addressBook: unique id's
 
 // Business Logic for AddressBook
 function AddressBook() {
     this.contacts = {};
+    this.currentId = 0;
 }
 
 // Methods for our Mock database
 
-/* This method ppicks up that particular contact's firstName and 
+/* This method picks up that particular contact's firstName and 
  turns it into a key and make it equal to the contact itself
  Now we can see addressBook is an object containing another object called contacts
 */

@@ -39,3 +39,24 @@ let contact2 = new Contact("Jennifer", "Ebun", "Ololade", "+227-9099900919", "jO
 addressBook.addContact(contact);
 addressBook.addContact(contact2);
 <!-- using our new method to store our contacts in the database -->
+
+
+<!-- A test to check for uniqueness: -->
+Test: "Testing if our method candifferentiate between two people if their names are both Emmanuel"
+
+Code:
+let emmaContact1 = new Contact("Emmanuel", "Michael", "Ojedayo", "+234059509049", "emaaaaa241@gmail.com");
+
+
+let emmaContact2 = new Contact("Emmanuel", "Richie", "Bimbola", "+23405334566", "emazon241@gmail.com");
+
+addressBook.addContact(emmaContact1);
+addressBook.addContact(emmaContact2);
+
+<!-- Our test got failed because our prototypal method only picks one Emmanuel, and we added 2 Emmanuel: YES if we were using a datbase there would be unique identifiers, we can also write some code that creates unique id's for each of the added contacts -->
+
+<!-- What we will do now is to add a uniqueid feature to our mock database and write a method for incrementing it by one when a new Contact is added: at least that way we can be rest assured that our method won't see 2 different emmanuel's as the same thing like it did before -->
+
+
+<!-- after we've added new properties to our database and updated the method for adding contacts to use this new property: Let us rerun the previous test -->
+
