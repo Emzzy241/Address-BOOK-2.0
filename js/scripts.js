@@ -145,7 +145,8 @@ function editContact(id) {
 // delete and edit contact right inside our attachContactListeners() function
 
 function attachContactListeners() {
-    $("ül#showing-contacts").on("click", "li", function () {
+    
+    $("#showing-contacts").on("click", "li", function () {
         showContact(this.id);
     });
     // function for delete Contact
@@ -157,6 +158,7 @@ function attachContactListeners() {
     // function for edit Contact
     $("#edButton").on("click", ".editButton", function () {
         editContact(this.id);
+        
     });
 }
 
@@ -177,7 +179,7 @@ function displayingContactDetails(displayingAddressBook) {
 
 // the showContact() function
 
-function showContact() {
+function showContact(contactId) {
     const contact = addressBook.findContact(contactId);
     $("#all-contacts").show();
     $(".show-first-name").html(contact.firstName);
@@ -185,16 +187,16 @@ function showContact() {
     $(".show-last-name").html(contact.lastName);
     $(".show-phone-number").html(contact.phoneNumber);
     $(".show-email-address").html(contact.email);
-    $(".work-address").html(contact.workAddress.fullAddress);
-    $(".school-address").html(contact.schoolAddress.fullAddress);
-    $(".home-address").html(contact.homeAddress.fullAddress);
+    $(".work-address").html(contact.workAddress.fullAddress());
+    $(".school-address").html(contact.schoolAddress.fullAddress());
+    $(".home-address").html(contact.homeAddress.fullAddress());
 
     // Buttons for edit and delete
     let delButton = $("#delButton");
     delButton.empty();
     delButton.html("<button class='deleteButton btn btn-danger' id=" + contact.id + ">Delete</button>");
 
-    let edButton = $("edButton");
+    let edButton = $("#edButton");
     edButton.empty();
     edButton.html("<button class='editButton btn btn-success' id=" + contact.id + ">Edit</button");
 }
@@ -300,7 +302,7 @@ $(document).ready(function () {
         });
 
         resetFields();
-        event.preventDefault();
+        // event.preventDefault();
         console.log(newContact);
 
     });

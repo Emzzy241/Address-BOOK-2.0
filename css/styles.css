@@ -23,7 +23,7 @@ body{
     display: none;
 }
 
-#all-contacts p, li, .btn{
+#all-contacts p, li{
     margin-left: 20px;
 }
 
