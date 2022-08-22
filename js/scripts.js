@@ -103,3 +103,8 @@ Contact.prototype.fullName = function(){
 OtherAddresses.prototype.fullAddress = function(){
     return this.street + ", " + this.city + ", " + this.state ;
 }
+
+
+// Done with the business logic, now moving on to the userInterface logic
+
+// The userInterface Logic

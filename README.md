@@ -1,3 +1,75 @@
+# Address BOOK APPLICATION
+
+#### made by Mojiboye Emmanuel
+
+### A website where you can add in your contacts, delete them or edit them
+
+### Technologies Used
+* Git
+* Html
+* CSS
+* Javscript 
+* jQuery
+* Bootstrap
+* JavaScript Objects
+* JavaScript Mock databases
+
+
+### Description
+_This is an application for adding contacts to an address Book.... In this website you can easily add in contacts, remove contacts or edit contacts and With my amazing mock database, you can add in new contacts just like the way you do with your mobile phone_
+
+## Setup/Installation
+* _Open the directory._
+* _Click on the index.html file._
+_Note: the website is designed to run on a web browser just be sure you have one. _
+* _That's all the installation process you need to carry out. Have fun while working with this application. If you think its cool, be sure to give the application a thumbs up_
+
+## Known Bugs
+_As at the launching of this Project there are zero bugs in it. But if you do find a bug in it, be sure to notify me via my various social media handles below_
+
+## WEBSITE LINK
+https://github.com/Emzzy241/Mad-Libs
+
+## License 
+Licensed under the GNU General Public License 
+© 2022 _by Mojiboye Emmanuel_ All Rights Reserved.
+
+## Contact
+_Connect with me @Emmanuel.9944 on instagram and on all other social media pages all @Emmanuel Oluwole_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Starting the addressBOOK project -->
 
 <!-- Starting this project I Emmanuel will try as much as possible to break things down for anyone and everyone's understanding.... YES we will be needing a databasa, a mock one would be created but before that let's write some functions and some lovely methods too -->
@@ -130,3 +202,5 @@ testOtherAddresses.fullAddress();
 Expected Output: OtherAddresses {street: 'Ishaga', city: 'city', state:'Lagos'........ }
 
 <!-- Both our constructor and our method has been tested and the test has been passed -->
+
+<!-- Hurray we are done with our business logic and each of our functions, constructor and even our database works perfectly well.... We need to create our index.html and create other files that interact with the user now -->
