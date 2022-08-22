@@ -70,13 +70,12 @@ AddressBook.prototype.deleteContact = function(id){
 
 let addressBook = new AddressBook(); 
 
-function Contact(firstName, middleName, lastName, phoneNumber, email, dateWeMet, workAddress, schoolAddress, homeAddress){
+function Contact(firstName, middleName, lastName, phoneNumber, email, workAddress, schoolAddress, homeAddress){
     this.firstName = firstName;
     this.middleName = middleName;
     this.lastName = lastName;
     this.phoneNumber = phoneNumber;
     this.email = email;
-    this.dateWeMet = dateWeMet;
     this.workAddress = workAddress;
     this.schoolAddress = schoolAddress;
     this.homeAddress = homeAddress;
