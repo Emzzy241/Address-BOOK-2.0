@@ -19,13 +19,13 @@ function AddressBook() {
 */
 
 // The updated addContact() method for usind unique Id's
-AddressBook.prototype.addContact = function(contact){
+AddressBook.prototype.addContact = function (contact) {
     contact.id = this.assignId();
     this.contacts[contact.id] = contact;
 };
 
 
-AddressBook.prototype.assignId = function(){
+AddressBook.prototype.assignId = function () {
     this.currentId += 1;
     return this.currentId;
 };
@@ -43,8 +43,8 @@ AddressBook.prototype.assignId = function(){
 // THe method for finding contact
 
 
-AddressBook.prototype.findContact = function(id){
-    if (this.contacts[id] != undefined){
+AddressBook.prototype.findContact = function (id) {
+    if (this.contacts[id] != undefined) {
         return this.contacts[id];
     }
     return false;
@@ -52,10 +52,10 @@ AddressBook.prototype.findContact = function(id){
 
 // The method for deleting contact
 
-AddressBook.prototype.deleteContact = function(id){
-    if (this.contacts[id] === undefined){
+AddressBook.prototype.deleteContact = function (id) {
+    if (this.contacts[id] === undefined) {
         return false;
-        
+
     }
     delete this.contacts[id];
     return true;
@@ -68,9 +68,9 @@ AddressBook.prototype.deleteContact = function(id){
 
 // instantiating our address book
 
-let addressBook = new AddressBook(); 
+let addressBook = new AddressBook();
 
-function Contact(firstName, middleName, lastName, phoneNumber, email, workAddress, schoolAddress, homeAddress){
+function Contact(firstName, middleName, lastName, phoneNumber, email, workAddress, schoolAddress, homeAddress) {
     this.firstName = firstName;
     this.middleName = middleName;
     this.lastName = lastName;
@@ -83,7 +83,7 @@ function Contact(firstName, middleName, lastName, phoneNumber, email, workAddres
 
 // Let's make things easier by creating another constructor for(home, school, and city addresses)
 
-function OtherAddresses(street, city, state){
+function OtherAddresses(street, city, state) {
     this.street = street;
     this.city = city;
     this.state = state;
@@ -93,14 +93,14 @@ OtherAddresses
 // THe first method for Contact constructor: a method capable of 
 // joining user's lastName and firstName together
 
-Contact.prototype.fullName = function(){
+Contact.prototype.fullName = function () {
     return this.lastName + " " + this.middleName + " " + this.firstName;
 };
 
 // The first method for otherAddresses constructor:
 
-OtherAddresses.prototype.fullAddress = function(){
-    return this.street + ", " + this.city + ", " + this.state ;
+OtherAddresses.prototype.fullAddress = function () {
+    return this.street + ", " + this.city + ", " + this.state;
 }
 
 
@@ -114,7 +114,7 @@ OtherAddresses.prototype.fullAddress = function(){
 // if this function gets called, all the contact details that has been removed 
 // by our Add button and saved will appear back in each input field so the user can edit it
 
-function editContact(id){
+function editContact(id) {
     let contact = addressBook.findContact(id);
 
     $("input#new-contact-first-name").val(contact.firstName);
@@ -143,18 +143,18 @@ function editContact(id){
 // After the contact eventListeners has been attached, we want to give user the power to be able to 
 // delete and edit contact right inside our attachContactListeners() function
 
-function attachContactListeners(){
-    $("ül#showing-contacts").on("click", "li", function(){
+function attachContactListeners() {
+    $("ül#showing-contacts").on("click", "li", function () {
         showContact(this.id);
     });
     // function for delete Contact
-    $("#delButton").on("click", ".deleteButton" , function(){
+    $("#delButton").on("click", ".deleteButton", function () {
         addressBook.deleteContact(this.id);
         $("#all-contacts").hide();
         displayingContactDetails(addressBook);
     });
     // function for edit Contact
-    $("#edButton").on("click", ".editButton", function(){
+    $("#edButton").on("click", ".editButton", function () {
         editContact(this.id);
     });
 }
@@ -162,10 +162,10 @@ function attachContactListeners(){
 
 // function for displaying contact details
 
-function displayingContactDetails(displayingAddressBook){
+function displayingContactDetails(displayingAddressBook) {
     let contactsList = $("ul#showing-contacts");
     let htmlForContactInfo = "";
-    Object.keys(displayingAddressBook.contacts).forEach( function(key){
+    Object.keys(displayingAddressBook.contacts).forEach(function (key) {
         const contact = displayingAddressBook.findContact(key);
 
         htmlForContactInfo = "<li id=" + contact.id + ">" + contact.lastName + " " + contact.middleName + " " + contact.firstName + "</li>";
@@ -176,7 +176,7 @@ function displayingContactDetails(displayingAddressBook){
 
 // the showContact() function
 
-function showContact(){
+function showContact() {
     const contact = addressBook.findContact(contactId);
     $("#all-contacts").show();
     $(".show-first-name").html(contact.firstName);
@@ -195,12 +195,12 @@ function showContact(){
 
     let edButton = $("edButton");
     edButton.empty();
-    edButton.html("<button class='editButton btn btn-success' id="  + contact.id + ">Edit</button");
+    edButton.html("<button class='editButton btn btn-success' id=" + contact.id + ">Edit</button");
 }
 
 //  Function for reset fields
 
-function resetFields(){
+function resetFields() {
     $("input#new-contact-first-name").val();
     $("input#new-contact-middle-name").val();
     $("input#new-contact-last-name").val();
@@ -217,19 +217,19 @@ function resetFields(){
     $("input.school-state").val();
 }
 
-$(document).ready( function(){
+$(document).ready(function () {
     attachContactListeners();
-    $("#work-button").click( function(){
+    $("#work-button").click(function () {
         $("#work").show();
     });
-    $("#home-button").click( function(){
+    $("#home-button").click(function () {
         $("#home").show();
     });
-    $("#school-button").click( function(){
+    $("#school-button").click(function () {
         $("#school").show();
     });
 
-    $("form#add-contact").submit( function(event){
+    $("form#add-contact").submit(function (event) {
 
         event.preventDefault();
         const inputtedFirstName = $("input#new-contact-first-name").val();
@@ -268,7 +268,39 @@ $(document).ready( function(){
         $("input.school-city").val();
         $("input.school-state").val();
 
+        let inputtedWorkAddress = new OtherAddresses(inputtedWorkStreet, inputtedWorkCity, inputtedWorkState)
+        let inputtedHomeAddress = new OtherAddresses(inputtedHomeStreet, inputtedHomeCity, inputtedHomeState)
+        let inputtedSchoolAddress = new OtherAddresses(inputtedSchoolStreet, inputtedSchoolCity, inputtedSchoolState)
         
+        let newContact = new Contact(inputtedFirstName, inputtedMiddleName , inputtedLastName, inputtedPhoneNumber, inputtedEmail, inputtedWorkAddress, inputtedHomeAddress, inputtedSchoolAddress);
+        
+        // calling on the addressbook variabe instantiator
+
+        addressBook.addContact(newContact);
+        console.log(addressBook.contacts);
+
+        displayingContactDetails(addressBook);
+
+        // showing all our contacts in the span div after we click on the full name of the new contact
+
+        $(".contacts").last().click( function(){
+            $("#all-contacts").show();
+            $("#all-contacts h2").text(newContact.fullName());
+            $(".show-first-name").text(newContact.firstName);
+            $(".show-middle-name").text(newContact.middleName);
+            $(".show-last-name").text(newContact.lastName);
+            $(".show-phone-number").text(newContact.phoneNumber);
+            $(".show-email-address").text(newContact.email);
+
+            $(".work-address").text(newContact.workAddress.fullAddress());
+            $(".school-address").text(newContact.schoolAddress.fullAddress());
+            $(".home-address").text(newContact.homeAddress.fullAddress());
+            
+        });
+
+        resetFields();
+        event.preventDefault();
+        console.log(newContact);
 
     });
 
