@@ -92,3 +92,6 @@ Code:
 let contact = new Contact("Adanna", "Mercy", "Okoli", "+234-858585990", "adannaOk@hotmail.com");
 
 let contact2 = new Contact("Jennifer", "Ebun", "Ololade", "+227-9099900919", "jOlolade@rocketmail.com");
+
+addressBook.findContact(2);
+Expected Output: Contact {firstName:........ id: 2}

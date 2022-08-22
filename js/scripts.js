@@ -42,6 +42,15 @@ AddressBook.prototype.assignId = function(){
 // we need to make our database behave like a real one and a real one can find and delete contacts, 
 // THe method for finding contact
 
+
+AddressBook.prototype.findContact = function(id){
+    if (this.contacts[id] != undefined){
+        return this.contacts[id];
+    }
+    return false;
+}
+
+
 // The constructor for Contacts will be written first and tested 
 // in the console
 
