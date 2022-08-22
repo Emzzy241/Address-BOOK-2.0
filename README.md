@@ -110,6 +110,19 @@ let contact2 = new Contact("Jennifer", "Ebun", "Ololade", "+227-9099900919", "jO
 
 addressBook.deleteContact(2);
 
-Expected Output: Contact 2 gets deleted
+Expected Output: Contact 2 gets deleted and its Id is never reused when we add in more contacts
 
 <!-- The Test was passed and moving on!!! -->
+
+<!-- The last test for our business logic is the test for our new constructor(OtherAddresses constructor) for storing user's other addresses like work, school e.t.c -->
+
+Describe: The method for showing users full address in one line and only separating it with a comma
+
+Test: "When we run our method on a contact variable(datatype name is object) storing our contact object, it returns user's workAddress on a single line, users homeAddress on another line and user's schoolAddress on another line with commas separating them"
+
+Code: 
+let testOtherAddresses = new OtherAddresses("Ishaga", "Ogba", "Lagos");
+
+let testOtherAddresses2 = new OtherAddresses("Matogun", "Arolambo", "Ogun");
+
+Expected Output: OtherAddresses {street: 'Ishaga', city: 'city', state:'Lagos'........ }

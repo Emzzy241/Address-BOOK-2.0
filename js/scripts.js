@@ -82,10 +82,24 @@ function Contact(firstName, middleName, lastName, phoneNumber, email, dateWeMet,
     this.homeAddress = homeAddress;
 }
 
-// THe first method for this function: a method capable of 
+// Let's make things easier by creating another constructor for(home, school, and city addresses)
+
+function OtherAddresses(street, city, state){
+    this.street = street;
+    this.city = city;
+    this.state = state;
+}
+OtherAddresses
+
+// THe first method for Contact constructor: a method capable of 
 // joining user's lastName and firstName together
 
 Contact.prototype.fullName = function(){
     return this.lastName + " " + this.middleName + " " + this.firstName;
 };
 
+// The first method for otherAddresses constructor:
+
+OtherAddresses.prototype.fullAddress = function(){
+    return this.street + ", " + this.city + ", " + this.state ;
+}
