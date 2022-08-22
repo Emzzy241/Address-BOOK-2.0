@@ -229,4 +229,47 @@ $(document).ready( function(){
         $("#school").show();
     });
 
-})
+    $("form#add-contact").submit( function(event){
+
+        event.preventDefault();
+        const inputtedFirstName = $("input#new-contact-first-name").val();
+        const inputtedMiddleName = $("input#new-contact-middle-name").val();
+        const inputtedLastName = $("input#new-contact-last-name").val();
+        const inputtedPhoneNumber = $("input#new-contact-phone-number").val();
+        const inputtedEmail = $("input#new-contact-email-address").val();
+
+        $("input#new-contact-first-name").val();
+        $("input#new-contact-middle-name").val();
+        $("input#new-contact-last-name").val();
+        $("input#new-contact-phone-number").val();
+        $("input#new-contact-email-address").val();
+
+        const inputtedWorkStreet = $("input.work-street").val();
+        const inputtedWorkCity = $("input.work-city").val();
+        const inputtedWorkState = $("input.work-state").val();
+
+        $("input.work-street").val();
+        $("input.work-city").val();
+        $("input.work-state").val();
+
+        const inputtedHomeStreet = $("input.home-street").val();
+        const inputtedHomeCity = $("input.home-city").val();
+        const inputtedHomeState = $("input.home-state").val();
+
+        $("input.home-street").val();
+        $("input.home-city").val();
+        $("input.home-state").val();
+
+        const inputtedSchoolStreet = $("input.school-street").val();
+        const inputtedSchoolCity = $("input.school-city").val();
+        const inputtedSchoolState = $("input.school-state").val();
+
+        $("input.school-street").val();
+        $("input.school-city").val();
+        $("input.school-state").val();
+
+        
+
+    });
+
+});
