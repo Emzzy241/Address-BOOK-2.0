@@ -198,3 +198,21 @@ function showContact(){
     edButton.html("<button class='editButton btn btn-success' id="  + contact.id + ">Edit</button");
 }
 
+//  Function for reset fields
+
+function resetFields(){
+    $("input#new-contact-first-name").val();
+    $("input#new-contact-middle-name").val();
+    $("input#new-contact-last-name").val();
+    $("input#new-contact-phone-number").val();
+    $("input#new-contact-email-address").val();
+    $("input.work-street").val();
+    $("input.work-city").val();
+    $("input.work-state").val();
+    $("input.home-street").val();
+    $("input.home-city").val();
+    $("input.home-state").val();
+    $("input.school-street").val();
+    $("input.school-city").val();
+    $("input.school-state").val();
+}
