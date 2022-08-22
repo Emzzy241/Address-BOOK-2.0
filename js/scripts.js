@@ -216,3 +216,17 @@ function resetFields(){
     $("input.school-city").val();
     $("input.school-state").val();
 }
+
+$(document).ready( function(){
+    attachContactListeners();
+    $("#work-button").click( function(){
+        $("#work").show();
+    });
+    $("#home-button").click( function(){
+        $("#home").show();
+    });
+    $("#school-button").click( function(){
+        $("#school").show();
+    });
+
+})
