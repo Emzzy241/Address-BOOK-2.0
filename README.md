@@ -125,4 +125,8 @@ let testOtherAddresses = new OtherAddresses("Ishaga", "Ogba", "Lagos");
 
 let testOtherAddresses2 = new OtherAddresses("Matogun", "Arolambo", "Ogun");
 
+testOtherAddresses.fullAddress();
+
 Expected Output: OtherAddresses {street: 'Ishaga', city: 'city', state:'Lagos'........ }
+
+<!-- Both our constructor and our method has been tested and the test has been passed -->
