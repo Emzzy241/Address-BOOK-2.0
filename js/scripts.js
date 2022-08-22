@@ -18,6 +18,7 @@ function AddressBook() {
 };
 */
 
+
 // The updated addContact() method for usind unique Id's
 AddressBook.prototype.addContact = function (contact) {
     contact.id = this.assignId();

@@ -19,6 +19,9 @@ body{
 .btn-secondary{
     margin-top: 15px;
 }
+#all-contacts{
+    display: none;
+}
 
 #all-contacts p, li, .btn{
     margin-left: 20px;
@@ -26,6 +29,7 @@ body{
 
 /* Making our home, school, and work forms disapper until user
 clicks on a button to fill any one of them */
+
 
 #home{
     margin-block-end: 40px;
