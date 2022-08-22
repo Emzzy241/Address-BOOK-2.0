@@ -50,6 +50,18 @@ AddressBook.prototype.findContact = function(id){
     return false;
 }
 
+// The method for deleting contact
+
+AddressBook.prototype.deleteContact = function(id){
+    if (this.contacts[id] === undefined){
+        return false;
+        
+    }
+    delete this.contacts[id];
+    return true;
+};
+
+
 
 // The constructor for Contacts will be written first and tested 
 // in the console

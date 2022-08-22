@@ -95,3 +95,20 @@ let contact2 = new Contact("Jennifer", "Ebun", "Ololade", "+227-9099900919", "jO
 
 addressBook.findContact(2);
 Expected Output: Contact {firstName:........ id: 2}
+
+
+<!-- Now we can find Contacts by calling our method on a particular key, but wouldn't it be fun if we could also delete contacts too? Let us write a new deleteContact method, write a test for it and pass that test -->
+
+Describe: The method for deleting contacts
+
+Test: "When we run our method on a contact,It will find that contact and delete it"
+
+Code:
+let contact = new Contact("Adanna", "Mercy", "Okoli", "+234-858585990", "adannaOk@hotmail.com");
+
+let contact2 = new Contact("Jennifer", "Ebun", "Ololade", "+227-9099900919", "jOlolade@rocketmail.com");
+
+addressBook.deleteContact(2);
+
+Expected Output: Contact 2 gets deleted
+
