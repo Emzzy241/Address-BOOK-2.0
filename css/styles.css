@@ -1,4 +1,4 @@
-/* 
+
 :root{
     --royal-blue-dark: hsl(231, 68%, 21%);
 }
@@ -18,13 +18,18 @@ body{
 
 .btn-secondary{
     margin-top: 15px;
-} */
+} 
 
 
 
-/* #all-contacts p, li{
-    margin-left: 20px;
-} */
+.all-contacts #show-all-contacts {
+    margin-left: 50px;
+}
+
+.btn{
+    margin-right: 10px;
+}
+
 
 #show-all-contacts{
     display: none;

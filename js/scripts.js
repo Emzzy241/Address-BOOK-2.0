@@ -294,9 +294,7 @@ $(document).ready(function () {
 
         $(".contacts").last().click( function(){
             $("#show-all-contacts").show();
-            $("#show-all-contacts h2").text(newContacts.fullName());
-
-            $(".show-viewer").text(newContacts.id);
+        
             $(".show-first-name").text(newContacts.firstName);
             $(".show-middle-name").text(newContacts.middleName);
             $(".show-last-name").text(newContacts.lastName);
