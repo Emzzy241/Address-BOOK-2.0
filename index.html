@@ -37,14 +37,14 @@
                     <input type="text" id="new-contact-last-name" class="form-control">
                     <br>
                     <label for="new-contact-phone-number">Phone Number:</label>
-                    <input type="number" id="new-contact-phone-number" class="form-control">
+                    <input type="text" id="new-contact-phone-number" class="form-control">
                     <br>
                     <label for="new-contact-email-address">Email Address:</label>
-                    <input type="email" id="new-contact-email-address" class="form-control">
+                    <input type="text" id="new-contact-email-address" class="form-control">
                     <br> <br>
 
 
-
+<!-- 
                     <div id="work">
                         <h4>Work Address</h4>
                         <div class="work-address1">
@@ -97,7 +97,7 @@
                                 <input type="text" class="form-control school-state">
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     
 
@@ -107,44 +107,51 @@
 
                 </form>
 
-
+<!-- 
                 <button type="button" class="btn btn-secondary " id="work-button">Add Work Address </button>
                 <button type="button" class="btn btn-secondary " id="home-button">Add Home Address </button>
                 <button type="button" class="btn btn-secondary " id="school-button">Add School Address </button>
 
-                <br> <br> <br>
+                <br> <br> <br> -->
             </div>
 
             <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6 two">
-                <h2>Contacts:</h2>
-
-                <ul id="showing-contacts">
-                </ul>
-
-                <div id="all-contacts">
-                    <h2></h2>
-
-                    <p>First Name: <span class="show-first-name"></span></p>
-                    <p>Middle Name: <span class="show-middle-name"></span></p>
-                    <p>Last Name: <span class="show-last-name"></span></p>
-                    <p>Phone Number: <span class="show-phone-number"></span></p>
-                    <p>Email Address: <span class="show-email-address"></span></p>
-
-                    <p>
-                        <li>Work Address: <span class="work-address"></span></li>
-                    </p>
-                    <p>
-                        <li>School Address: <span class="school-address"></span></li>
-                    </p>
-                    <p>
-                        <li>Home Address: <span class="home-address"></span></li>
-                    </p>
-
-
-                    <div id="delButton" class="btn btn-danger"></div>
-                    <div id="edButton" class="btn btn-success"></div>
-
+                
+                <div class="contacts-place">
+                    <h2>Contacts:</h2>
                 </div>
+
+
+                <div class="all-contacts">
+                    <ul id="showing-contacts">
+                    </ul>
+    
+                    <div id="show-all-contacts">
+                        <h2></h2>
+    
+                        <p>First Name: <span class="show-first-name"></span></p>
+                        <p>Middle Name: <span class="show-middle-name"></span></p>
+                        <p>Last Name: <span class="show-last-name"></span></p>
+                        <p>Phone Number: <span class="show-phone-number"></span></p>
+                        <p>Email Address: <span class="show-email-address"></span></p>
+    
+                        <!-- <p>
+                            <li>Work Address: <span class="work-address"></span></li>
+                        </p>
+                        <p>
+                            <li>School Address: <span class="school-address"></span></li>
+                        </p>
+                        <p>
+                            <li>Home Address: <span class="home-address"></span></li>
+                        </p>
+     -->
+    
+                        <div id="delButton" class="btn btn-danger"></div>
+                        <div id="edButton" class="btn btn-success"></div>
+    
+                    </div>
+                </div>
+                
             </div>
         </div>
 

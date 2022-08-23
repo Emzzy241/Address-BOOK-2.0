@@ -1,4 +1,4 @@
-
+/* 
 :root{
     --royal-blue-dark: hsl(231, 68%, 21%);
 }
@@ -18,13 +18,16 @@ body{
 
 .btn-secondary{
     margin-top: 15px;
-}
-#all-contacts{
-    display: none;
-}
+} */
 
-#all-contacts p, li{
+
+
+/* #all-contacts p, li{
     margin-left: 20px;
+} */
+
+#show-all-contacts{
+    display: none;
 }
 
 /* Making our home, school, and work forms disapper until user
