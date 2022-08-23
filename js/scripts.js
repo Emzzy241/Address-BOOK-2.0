@@ -171,9 +171,9 @@ function displayingContactDetails(displayingAddressBook) {
     let contactsList = $("ul#showing-contacts");
     let htmlForContactInfo = "";
     Object.keys(displayingAddressBook.contacts).forEach(function (key) {
-        const contact = displayingAddressBook.findContact(key);
+        let contact = displayingAddressBook.findContact(key);
 
-        htmlForContactInfo = "<li id=" + contact.id + ">" + contact.lastName + " " + contact.middleName + " " + contact.firstName + "</li>";
+        htmlForContactInfo += "<li id=" + contact.id + ">" + contact.lastName + " " + contact.middleName + " " + contact.firstName + "</li>";
     });
     console.log(htmlForContactInfo);
     contactsList.html(htmlForContactInfo)
@@ -295,6 +295,8 @@ $(document).ready(function () {
         $(".contacts").last().click( function(){
             $("#show-all-contacts").show();
             $("#show-all-contacts h2").text(newContacts.fullName());
+
+            $(".show-viewer").text(newContacts.id);
             $(".show-first-name").text(newContacts.firstName);
             $(".show-middle-name").text(newContacts.middleName);
             $(".show-last-name").text(newContacts.lastName);
@@ -308,7 +310,7 @@ $(document).ready(function () {
         });
 
         resetFields();
-        event.preventDefault();
+        e.preventDefault();
         console.log(newContacts);
 
     });
