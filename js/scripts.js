@@ -81,12 +81,12 @@ function Contact(firstName, middleName, lastName, phoneNumber, email, workAddres
 
 // Let's make things easier by creating another constructor for(home, school, and city addresses)
 
-// function OtherAddresses(street, city, state) {
-//     this.street = street;
-//     this.city = city;
-//     this.state = state;
-// }
-// OtherAddresses
+function OtherAddresses(street, city, state) {
+    this.street = street;
+    this.city = city;
+    this.state = state;
+}
+OtherAddresses
 
 // THe first method for Contact constructor: a method capable of 
 // joining user's lastName and firstName together
@@ -97,9 +97,9 @@ Contact.prototype.fullName = function () {
 
 // The first method for otherAddresses constructor:
 
-// OtherAddresses.prototype.fullAddress = function () {
-//     return this.street + ", " + this.city + ", " + this.state;
-// }
+OtherAddresses.prototype.fullAddress = function () {
+    return this.street + ", " + this.city + ", " + this.state;
+}
 
 
 // instantiating our address book
@@ -125,15 +125,15 @@ function editContact(id) {
     $("input#new-contact-last-name").val(contact.lastName);
     $("input#new-contact-phone-number").val(contact.phoneNumber);
     $("input#new-contact-email-address").val(contact.email);
-    // $(".work-street").val(contact.workAddress.street);
-    // $(".work-city").val(contact.workAddress.city);
-    // $(".work-state").val(contact.workAddress.state);
-    // $(".school-street").val(contact.schoolAddress.street);
-    // $(".school-city").val(contact.schoolAddress.city);
-    // $(".school-state").val(contact.schoolAddress.state);
-    // $(".home-street").val(contact.homeAddress.street);
-    // $(".home-city").val(contact.homeAddress.city);
-    // $(".home-state").val(contact.homeAddress.state);
+    $(".work-street").val(contact.workAddress.street);
+    $(".work-city").val(contact.workAddress.city);
+    $(".work-state").val(contact.workAddress.state);
+    $(".school-street").val(contact.schoolAddress.street);
+    $(".school-city").val(contact.schoolAddress.city);
+    $(".school-state").val(contact.schoolAddress.state);
+    $(".home-street").val(contact.homeAddress.street);
+    $(".home-city").val(contact.homeAddress.city);
+    $(".home-state").val(contact.homeAddress.state);
 
     addressBook.deleteContact(id);
     $("#show-all-contacts").hide();
@@ -189,9 +189,9 @@ function showContact(contactId) {
     $(".show-last-name").html(contact.lastName);
     $(".show-phone-number").html(contact.phoneNumber);
     $(".show-email-address").html(contact.email);
-    // $(".work-address").html(contact.workAddress.fullAddress());
-    // $(".school-address").html(contact.schoolAddress.fullAddress());
-    // $(".home-address").html(contact.homeAddress.fullAddress());
+    $(".work-address").html(contact.workAddress.fullAddress());
+    $(".school-address").html(contact.schoolAddress.fullAddress());
+    $(".home-address").html(contact.homeAddress.fullAddress());
 
     // Buttons for edit and delete
     let delButton = $("#delButton");
@@ -211,28 +211,28 @@ function resetFields() {
     $("input#new-contact-last-name").val();
     $("input#new-contact-phone-number").val();
     $("input#new-contact-email-address").val();
-    // $("input.work-street").val();
-    // $("input.work-city").val();
-    // $("input.work-state").val();
-    // $("input.home-street").val();
-    // $("input.home-city").val();
-    // $("input.home-state").val();
-    // $("input.school-street").val();
-    // $("input.school-city").val();
-    // $("input.school-state").val();
+    $("input.work-street").val();
+    $("input.work-city").val();
+    $("input.work-state").val();
+    $("input.home-street").val();
+    $("input.home-city").val();
+    $("input.home-state").val();
+    $("input.school-street").val();
+    $("input.school-city").val();
+    $("input.school-state").val();
 }
 
 $(document).ready(function () {
     attachContactListeners();
-    // $("#work-button").click(function () {
-    //     $("#work").show();
-    // });
-    // $("#home-button").click(function () {
-    //     $("#home").show();
-    // });
-    // $("#school-button").click(function () {
-    //     $("#school").show();
-    // });
+    $("#work-button").click(function () {
+        $("#work").show();
+    });
+    $("#home-button").click(function () {
+        $("#home").show();
+    });
+    $("#school-button").click(function () {
+        $("#school").show();
+    });
 
     $("form#add-contact").submit(function (e) {
 
@@ -249,37 +249,37 @@ $(document).ready(function () {
         $("input#new-contact-phone-number").val("");
         $("input#new-contact-email-address").val("");
 
-        // const inputtedWorkStreet = $("input.work-street").val();
-        // const inputtedWorkCity = $("input.work-city").val();
-        // const inputtedWorkState = $("input.work-state").val();
+        let inputtedWorkStreet = $("input.work-street").val();
+        let inputtedWorkCity = $("input.work-city").val();
+        let inputtedWorkState = $("input.work-state").val();
 
-        // $("input.work-street").val();
-        // $("input.work-city").val();
-        // $("input.work-state").val();
+        $("input.work-street").val("");
+        $("input.work-city").val("");
+        $("input.work-state").val("");
 
-        // const inputtedHomeStreet = $("input.home-street").val();
-        // const inputtedHomeCity = $("input.home-city").val();
-        // const inputtedHomeState = $("input.home-state").val();
+        let inputtedHomeStreet = $("input.home-street").val();
+        let inputtedHomeCity = $("input.home-city").val();
+        let inputtedHomeState = $("input.home-state").val();
 
-        // $("input.home-street").val();
-        // $("input.home-city").val();
-        // $("input.home-state").val();
+        $("input.home-street").val("");
+        $("input.home-city").val("");
+        $("input.home-state").val("");
 
-        // const inputtedSchoolStreet = $("input.school-street").val();
-        // const inputtedSchoolCity = $("input.school-city").val();
-        // const inputtedSchoolState = $("input.school-state").val();
+        let inputtedSchoolStreet = $("input.school-street").val();
+        let inputtedSchoolCity = $("input.school-city").val();
+        let inputtedSchoolState = $("input.school-state").val();
 
-        // $("input.school-street").val();
-        // $("input.school-city").val();
-        // $("input.school-state").val();
+        $("input.school-street").val("");
+        $("input.school-city").val("");
+        $("input.school-state").val("");
 
-        // let inputtedWorkAddress = new OtherAddresses(inputtedWorkStreet, inputtedWorkCity, inputtedWorkState)
-        // let inputtedHomeAddress = new OtherAddresses(inputtedHomeStreet, inputtedHomeCity, inputtedHomeState)
-        // let inputtedSchoolAddress = new OtherAddresses(inputtedSchoolStreet, inputtedSchoolCity, inputtedSchoolState)
+        let inputtedWorkAddress = new OtherAddresses(inputtedWorkStreet, inputtedWorkCity, inputtedWorkState)
+        let inputtedHomeAddress = new OtherAddresses(inputtedHomeStreet, inputtedHomeCity, inputtedHomeState)
+        let inputtedSchoolAddress = new OtherAddresses(inputtedSchoolStreet, inputtedSchoolCity, inputtedSchoolState)
         
         // let newContact = new Contact(inputtedFirstName, inputtedMiddleName , inputtedLastName, inputtedPhoneNumber, inputtedEmail, inputtedWorkAddress, inputtedHomeAddress, inputtedSchoolAddress);
         
-        let newContacts = new Contact(inputtedFirstName, inputtedMiddleName, inputtedLastName, inputtedPhoneNumber, inputtedEmail /*, inputtedWorkAddress, inputtedHomeAddress, inputtedSchoolAddress*/)
+        let newContacts = new Contact(inputtedFirstName, inputtedMiddleName, inputtedLastName, inputtedPhoneNumber, inputtedEmail, inputtedWorkAddress, inputtedHomeAddress, inputtedSchoolAddress)
         
         // calling on the addressbook variabe instantiator
 
@@ -301,9 +301,9 @@ $(document).ready(function () {
             $(".show-phone-number").text(newContacts.phoneNumber);
             $(".show-email-address").text(newContacts.email);
 
-            // $(".work-address").text(newContact.workAddress.fullAddress());
-            // $(".school-address").text(newContact.schoolAddress.fullAddress());
-            // $(".home-address").text(newContact.homeAddress.fullAddress());
+            $(".work-address").text(newContacts.workAddress.fullAddress());
+            $(".school-address").text(newContacts.schoolAddress.fullAddress());
+            $(".home-address").text(newContacts.homeAddress.fullAddress());
             
         });
 
