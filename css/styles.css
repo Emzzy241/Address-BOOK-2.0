@@ -1,6 +1,7 @@
 
 :root{
     --royal-blue-dark: hsl(231, 68%, 21%);
+    --ksu-purple: hsl(275, 54%, 33%);
 }
 
 *{
@@ -57,4 +58,26 @@ clicks on a button to fill any one of them */
     margin-top: 20px;
     display: none;
     margin-block-end: 30px;
+}
+
+.footer-bottom {
+    background-color: var(--ksu-purple);
+    text-align: center;
+    color: white;
+    height: 70px;
+}
+
+
+
+.footer-bottom a{
+    color: white;
+}
+
+.copyright-link {
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.copyright-link:is(:hover, :focus) {
+    text-decoration: none;
 }
