@@ -21,7 +21,9 @@ body{
     margin-top: 15px;
 } 
 
-
+.container{
+    margin-block-end: 50px;
+}
 
 .all-contacts #show-all-contacts {
     margin-left: 50px;

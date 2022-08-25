@@ -8,6 +8,7 @@
 * Git
 * Html
 * CSS
+* BootStrap
 * Javscript 
 * jQuery
 * Bootstrap
