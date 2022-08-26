@@ -56,6 +56,7 @@ _Connect with me @Emmanuel.9944 on instagram and on all other social media pages
 
 
 
+## ALL THE MANUAL TESTS FOR MY APPLICATION
 
 
 
